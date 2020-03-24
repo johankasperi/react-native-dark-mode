@@ -33,6 +33,11 @@ RCT_EXPORT_MODULE();
 	};
 }
 
+RCT_EXPORT_METHOD(getCurrentMode:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    resolve([UIScreen getCurrentMode]);
+}
+
 - (NSArray<NSString *> *)supportedEvents
 {
 	return @[@"currentModeChanged"];
